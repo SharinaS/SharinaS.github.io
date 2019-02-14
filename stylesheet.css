@@ -1,0 +1,286 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+  color: #fff;
+  font-weight: 200;
+  padding: 40px 10px 0px 10px;
+}
+
+#centered-name {
+  color: black;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* GRID */
+
+.grid { max-width: 940px; width: 100%; margin: 0 auto; }
+
+.four {
+	width: 32.26%;
+}
+
+/* COLUMNS */
+
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+
+.col:first-of-type { margin-left: 0; }
+
+/* CLEARFIX */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/* GENERAL STYLES FOR BOX AND OVERLAY */
+
+.box {
+  display: block;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #0099ff;
+  text-align: center;
+  position: relative;
+}
+
+.middle-box {
+  background-color: white;
+}
+
+.overlay {
+  width: 100%;
+  height:100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: transform 0.5s ease-out;
+  -o-transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  line-height: 30px;
+}
+
+/* BOXES 1 and 6 - GitHub & CodePen */
+.slide-in .overlay{
+  color: #fff;
+  transform: translateX(-100%);
+}
+
+.slide-in .box:hover .overlay {
+  transform: translateX(0);
+}
+
+.first {
+  background-color: #59A596;
+}
+
+.second {
+  background-color:	#C0D894;
+}
+
+
+/* add delay to symbol in overlay */
+
+.slide-in .overlay i{
+  transform: translateY(-80%);
+  opacity: 0;
+  -webkit-transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+  -o-transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+  transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+}
+
+.slide-in .box:hover .overlay i{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* BOX 2 - LINKEDIN */
+
+.slide-up .overlay{
+  background-color: #3dcbe8;
+  color: #fff;
+  transform: translateY(100%);
+}
+
+.slide-up .box:hover .overlay{
+  transform: translateY(0);
+}
+
+/* add delay to symbol in overlay */
+.slide-up .overlay i{
+  transform: translateY(-80%);
+  opacity: 0;
+  -webkit-transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+  -o-transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+  transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+}
+
+.slide-up .box:hover .overlay i {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* BOX 3 - INSTAGRAM */
+
+.slide-down .overlay {
+  background-color: #ee6f8c;
+  color: #fff;
+  transform: translateY(-100%);
+}
+
+.slide-down .box:hover .overlay{
+  transform: translateY(0);
+}
+
+.slide-down .overlay i{
+  transform: translateY(-80%);
+  opacity: 0;
+  -webkit-transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+  -o-transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+  transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+}
+
+.slide-down .box:hover .overlay i{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* BOX 4 - PROGRAMMING BLOG */
+
+.slide-left .overlay{
+  background-color: #efcb5e;
+  color: #fff;
+  transform: translateX(100%);
+}
+
+.slide-left .box:hover .overlay{
+  transform: translateX(0) scale(1);
+}
+
+/* add delay to symbol in overlay */
+.slide-left .overlay i{
+  transform: translateY(-80%);
+  opacity: 0;
+  -webkit-transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+  -o-transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+  transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+}
+
+.slide-left .box:hover .overlay i{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* BOX 7 - PROJECTS */
+
+.skew .overlay{
+  background-color: #f44336;
+  color: #fff;
+  opacity: 0;
+  transform: skewX(-10deg);
+}
+
+.skew .box:hover .overlay{
+  transform: skewX(0deg);
+  opacity: 1;
+}
+
+/* ROTATE - BOX 7*/
+
+.rotate .overlay{
+  background-color: #6d94bb;
+  line-height: 30px;
+  color: #fff;
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+  -webkit-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}
+
+.rotate .box:hover .overlay{
+  transform: rotate(0deg);
+}
+
+/* add delay to symbol in overlay */
+.rotate .overlay i{
+  transform: translateY(-80%);
+  opacity: 0;
+  -webkit-transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+  -o-transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+  transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+}
+
+.rotate .box:hover .overlay i{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* BOX 8 - CONTACT ME */
+.corner-bottom .overlay{
+  background-color: #94D5D8;
+  color: #fff;
+  transform: translate(100%, 100%);
+}
+
+.corner-bottom .box:hover .overlay{
+   transform: translate(0, 0);
+}
+
+/* add delay to symbol in overlay */
+.corner-bottom .overlay i{
+  transform: translateY(-80%);
+  opacity: 0;
+  -webkit-transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+  -o-transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+  transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+}
+
+.corner-bottom .box:hover .overlay i{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* CORNER - BOX 9 */
+
+.corner-top .overlay{
+  background-color: #D894C3;
+  color: #fff;
+  transform: translate(-100%, -100%);
+}
+
+.corner-top .box:hover .overlay{
+   transform: translate(0, 0);
+}
+
+/* add delay to symbol in overlay */
+.corner-top .overlay i{
+  transform: translateY(-80%);
+  opacity: 0;
+  -webkit-transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+  -o-transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+  transition: transform 0.5s linear, opacity 0.5s linear 0.5s;
+}
+
+.corner-top .box:hover .overlay i{
+  transform: translateY(0);
+  opacity: 1;
+}
